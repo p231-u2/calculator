@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Techno It Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <h1>Techno It</h1>
+      <section class="calculator" aria-label="iOS style calculator">
+        <div class="display-panel">
+          <p id="history" class="history" aria-live="polite"></p>
+          <p id="display" class="display" aria-live="assertive">0</p>
+        </div>
+
+        <div class="buttons" role="group" aria-label="Calculator buttons">
+          <button class="btn utility" data-action="clear">AC</button>
+          <button class="btn utility" data-action="sign">+/-</button>
+          <button class="btn utility" data-action="percent">%</button>
+          <button class="btn operator" data-action="operator" data-value="divide">÷</button>
+
+          <button class="btn number" data-action="digit" data-value="7">7</button>
+          <button class="btn number" data-action="digit" data-value="8">8</button>
+          <button class="btn number" data-action="digit" data-value="9">9</button>
+          <button class="btn operator" data-action="operator" data-value="multiply">×</button>
+
+          <button class="btn number" data-action="digit" data-value="4">4</button>
+          <button class="btn number" data-action="digit" data-value="5">5</button>
+          <button class="btn number" data-action="digit" data-value="6">6</button>
+          <button class="btn operator" data-action="operator" data-value="subtract">−</button>
+
+          <button class="btn number" data-action="digit" data-value="1">1</button>
+          <button class="btn number" data-action="digit" data-value="2">2</button>
+          <button class="btn number" data-action="digit" data-value="3">3</button>
+          <button class="btn operator" data-action="operator" data-value="add">+</button>
+
+          <button class="btn number zero" data-action="digit" data-value="0">0</button>
+          <button class="btn number" data-action="decimal">.</button>
+          <button class="btn operator" data-action="equals">=</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
