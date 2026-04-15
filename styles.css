@@ -1,0 +1,128 @@
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --panel: #101010;
+  --text: #fff;
+  --number: #333;
+  --number-pressed: #737373;
+  --utility: #a5a5a5;
+  --utility-pressed: #d9d9d9;
+  --operator: #ff9f0a;
+  --operator-pressed: #ffd08a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1e1e1e, #000 60%);
+  color: var(--text);
+}
+
+.app-shell {
+  width: min(100%, 390px);
+  padding: 1.25rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.calculator {
+  background: var(--bg);
+  border-radius: 34px;
+  padding: 1rem;
+  box-shadow: 0 24px 45px rgba(0, 0, 0, 0.45);
+}
+
+.display-panel {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  padding: 0.75rem 0.6rem 1rem;
+}
+
+.history {
+  min-height: 1.25rem;
+  color: #8d8d93;
+  font-size: 1.2rem;
+}
+
+.display {
+  width: 100%;
+  text-align: right;
+  font-size: clamp(2rem, 8vw, 4rem);
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.btn {
+  border: none;
+  color: var(--text);
+  height: 72px;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 80ms ease, filter 120ms ease;
+}
+
+.btn:active,
+.btn.pressed {
+  transform: scale(0.96);
+}
+
+.number {
+  background: var(--number);
+}
+
+.number.pressed {
+  background: var(--number-pressed);
+}
+
+.utility {
+  background: var(--utility);
+  color: #000;
+}
+
+.utility.pressed {
+  background: var(--utility-pressed);
+}
+
+.operator {
+  background: var(--operator);
+}
+
+.operator.pressed,
+.operator.active {
+  background: var(--operator-pressed);
+  color: #fff;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 999px;
+  text-align: left;
+  padding-left: 1.75rem;
+}
